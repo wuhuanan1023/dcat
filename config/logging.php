@@ -99,6 +99,52 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        #####################################   自定义   ##############################
+        //文件上传
+        'upload' => [
+            //按天生成log文件
+            'driver' => 'daily',
+            //自定义日志目录
+            'path'   => storage_path('logs/upload.log'),
+            'level'  => 'info',
+        ],
+
+        //应用健康度检查
+        'app_health_check' => [
+            //按天生成log文件
+            'driver' => 'daily',
+            //自定义日志目录
+            'path'   => storage_path('logs/app_health_check.log'),
+            'level'  => 'info',
+        ],
+
+        //websocket
+        'websocket' => [
+            //按天生成log文件
+            'driver' => 'daily',
+            //自定义日志目录
+            'path'   => storage_path('logs/websocket.log'),
+            'level'  => 'info',
+        ],
+
+        'app_notice_error_job' => [
+            //按天生成log文件
+            'driver' => 'daily',
+            //自定义日志目录
+            'path'   => storage_path('logs/job/apps/notice/error.log'),
+            'level'  => 'info',
+        ],
+        'app_notice_health_job' => [
+            //按天生成log文件
+            'driver' => 'daily',
+            //自定义日志目录
+            'path'   => storage_path('logs/job/apps/notice/health.log'),
+            'level'  => 'info',
+        ],
+
+
+
     ],
 
 ];

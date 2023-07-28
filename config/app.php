@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('TIMEZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => env('LOCALE', 'en'),
 
     /*
     |--------------------------------------------------------------------------
@@ -174,6 +174,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        \Tymon\JWTAuth\Providers\LaravelServiceProvider::class, //JWT
+        \Illuminate\Redis\RedisServiceProvider::class, //REDIS
+        \Hhxsv5\LaravelS\Illuminate\LaravelSServiceProvider::class, //LaravelS
 
     ],
 
